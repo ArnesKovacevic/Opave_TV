@@ -1,0 +1,402 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    
+}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <style>
+        textarea{
+            resize: none;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+        h3, h4 {
+            margin: 10px 0 30px 0;
+            letter-spacing: 10px;
+            font-size: 20px;
+            color: #111;
+        }
+        body {
+            font: 400 15px/1.8 Lato, sans-serif;
+            color: #777;
+
+        }
+        .carousel img {
+   
+            width: 100%;
+            margin: auto;       
+            
+        }
+        .carousel .item{
+            height: 500px; 
+        }
+
+        .item img{
+            position: absolute; 
+            top: 0;
+            left: 0; 
+            min-height: 300px;
+        }
+        .bg-1 {
+            background: #2d2d30;
+            color: #bdbdbd;
+        }
+
+            .bg-1 h3 {
+                color: #fff;
+            }
+
+            .bg-1 p {
+                font-style: italic;
+            }
+
+
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+        }
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+            .thumbnail img {
+                height: 300px;
+                width: 400px;
+            }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f1f1f1;
+            border-radius: 0;
+            transition: .2s;
+        }
+
+            .btn:hover, .btn:focus {
+                border: 1px solid #333;
+                background-color: #fff;
+                color: #000;
+            }
+        .container-fluid {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    @* slide shoiw *@
+    <div class="container-fluid">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/Pictures/v1.jpg" />
+                    <div class="carousel-caption">
+                        <h3>KUNDEKONTAKT</h3>
+                        <p>Vores ry for kundeservice er god nok</p>
+                        <br />
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Pictures/v3.jpg" />
+                    <div class="carousel-caption">
+                        <h3>GARANTI</h3>
+                        <p>Garanti for en god oplevelse</p>
+                        <br />
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Pictures/v2.jpg" />
+                    <div class="carousel-caption">
+                        <h3>SIKKERHED</h3>
+                        <p>Hos X rejsebureau sender vi jer sikkert afsted</p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* front intro text    background-color: #333; *@
+    @*Showcase places X3*@
+    <div id="showcaseIntro" class="container text-center">
+        <h3>HOLIDAY WEBSITE</h3>
+        <p>Who Doesn't Enjoy Vacation </p>
+        <p> Hos XXX, er vi stolte af at kalde os Danmarks bedste rejsebureau. Vi tilbyder Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu Hør hvad vores rejsene siger</p>
+        <br />
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="text-center">BALI</h3> <br />
+                <a href="#balitxt" data-toggle="collapse">
+                    <img src="~/Pictures/bali.png" class="img-rounded" width="255" height="255" />
+                </a>
+                <div id="balitxt" class="collapse">
+                    <p>"En af de bedste rejser jeg har oplevet!" -Malthe </p>
+                    <p>"Det billige øl kunne man ikke få nok af" -Kirsten</p>
+                    <p>"Hvis I ikke har været afsted endnu, hvadv venter i så på?" -Morten</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="text-center">MALTA</h3> <br />
+                <a href="#maltatxt" data-toggle="collapse">
+                    <img src="~/Pictures/mal.png" class="img-rounded" width="255" height="255" />
+                </a>
+                <div id="maltatxt" class="collapse">
+                    <p>"Rig på smag og kultur" -Børge</p>
+                    <p>"Afslappende sted at tage familien med til" -Karen</p>
+                    <p>"Billig mad, Billig hotel, Billigt sted" -Kasper </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="text-center">ATHEN</h3> <br />
+                <a href="#anthentxt" data-toggle="collapse">
+                    <img src="~/Pictures/athen.png" class="img-rounded" width="255" height="255" />
+                </a>
+                <div id="anthentxt" class="collapse">
+                    <p>"For alle der har interesse indenfor kultur og historie!" -Ukendt</p>
+                    <p>"Jordens juvel" -Kim</p>
+                    <p>"Blandt verdens ældste og flotteste byer" -Ole</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    @*
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui
+                        p ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="col-sm-8">.col-sm-8</div>
+            </div>
+        </div>
+    *@
+
+    @*Display af office //mangler btn action evt noget med kontaktperson med modal *@
+    <div class="bg-1">
+        <div class="container">
+            <h3 class="text-center"> HOS XXX HAR VI ALDRIG FOR TRAVLT</h3>
+            <p class="text-center">Vi værdsætter vores kunder og tilbyder den bedste kundeservice. Du skal ikke være sky, kig forbi en af vores hovedkontorere omkring dig og sig hej</p>
+
+
+
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="~/Pictures/aa.png" width="400" height="300" />
+                        <p><strong>Aalborg</strong></p>
+                        <p>Gade23, 9000 Aalborg</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Sig Hej</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="~/Pictures/a.png" width="400" height="300" />
+                        <p><strong>Aarhus</strong></p>
+                        <p>gade244, xxxx Aarhus</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Sig Hej</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="~/Pictures/k.png" width="400" height="300" />
+                        <p><strong>Aalborg</strong></p>
+                        <p>gade522, xxx København</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Sig Hej</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @*modal edit til showcase *@
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2> Kontakt Person: XXX</h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"> Kom Forbi Kontoret, og tag en snak med mig!</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*modal edit til "webshop" *@
+
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2>Hat </h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"> en hat.</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2>Kuffert </h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"> En Kuffert</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2>Bikini </h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"> En Bikini</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Webshop *@
+
+    <div id="webshop" class="container">
+        <h3 class="text-center">MANGLER DU NOGET TIL REJSEN</h3>
+        <p class="text-center">FIND LIGE HVAD DU MANGLER HER</p>
+
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="~/Pictures/i1.png" width="255" height="255" />
+                    <p><strong>Hat</strong></p>
+                    <p>Til de Varme sommerdage</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal1"> Køb</button>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="~/Pictures/i2.png" width="255" height="255" />
+                    <p><strong>Kuffert</strong></p>
+                    <p>Kan bære op til 50kg</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal2"> Køb</button>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="~/Pictures/i3.png" width="255" height="255" />
+                    <p><strong>Bikini</strong></p>
+                    <p>Op til størrelse 55</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal3"> Køb</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*Kontakt *@
+    <div class="bg-1">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="text-center">INFO </h3>
+                <p class="text-center">vejvej 22 </p>
+                <p class="text-center">Aalborg, 9000 </p>
+                <p class="text-center">Virksomheds Politik </p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="text-center">KONTAKT </h3>
+                <p class="text-center">Tlf. 12313122 </p>
+                <p class="text-center">Hverdage 8-16</p>
+                <p class="text-center">mail@mail.com</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="text-center">LOGO.. </h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <div class="bg-1">
+
+
+    </div>
+
+</footer>
+
+ 
